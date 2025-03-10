@@ -117,7 +117,7 @@ docker-compose up --build
 ## 🛠 **API Endpoints**
 ### 1️⃣ **Create an Order**
 
-📌 Endpoint: 
+📌 Endpoint: POST
 ```bash
  http://localhost:3000/order/
 ```
@@ -130,6 +130,7 @@ docker-compose up --build
   "total_amount": 250.75
 }
 ```
+
 📌 Response:
 ```json
 {
@@ -139,22 +140,25 @@ docker-compose up --build
 ```
 
 ### 2️⃣ **Get Order Status**
-📌 Endpoint: GET ```/order/{order_id}```
+📌 Endpoint: GET 
 
-📌 Example Request:
-```sh
-curl -X GET "http://localhost:3000/order/101"
+```bash
+http://localhost:3000/order/{order_id}
 ```
 📌 Response:
 ```json
 {
   "order_id": 101,
   "status": "Processing"
+}
 ```
 
 ### 3️⃣ **Get Metrics**
-📌 Endpoint: GET ```/metrics/```
+📌 Endpoint: GET
 
+```bash
+http://localhost:3000/metrics/
+```
 📌 Response:
 
 ```json
@@ -164,4 +168,5 @@ curl -X GET "http://localhost:3000/order/101"
   "orders_processing": 500,
   "orders_completed": 300,
   "average_processing_time": 2.5
+}
 ```
