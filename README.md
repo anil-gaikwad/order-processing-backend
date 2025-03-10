@@ -78,13 +78,13 @@ order-processing-api/
 
 ## 🛠️ **Installation & Setup**  
 
-### **1️⃣ Clone the Repository** 
+#### **1️⃣ Clone the Repository** 
 ```bash
 https://github.com/anil-gaikwad/order-processing-backend.git
 cd order-processing-api
 ```
 
-### **2️⃣ Create a Virtual Environment** 
+#### **2️⃣ Create a Virtual Environment** 
  ```bash
  python -m venv venv
 source venv/bin/activate  # On macOS/Linux
@@ -92,30 +92,30 @@ venv\Scripts\activate     # On Windows
 
  ```
 
-### **3️⃣ Install Dependencies**
+#### **3️⃣ Install Dependencies**
 ```bash
 pip install -r requirements.txt
 ```
 
-## **4️⃣ Configure the Database**
+#### **4️⃣ Configure the Database**
 - **Edit .env file to set up SQLite / PostgreSQL / MySQL.**
 - **Initialize the database:**
 ```bash
 python database.py
 ```
 
-### **5️⃣ Run the Application**  
+#### **5️⃣ Run the Application**  
 ```bash
 uvicorn main:app --host 0.0.0.0 --port 3000 --reload
 ```
 
-### **6️⃣ Run with Docker (Optional)**  
+#### **6️⃣ Run with Docker (Optional)**  
 ```sh
 docker-compose up --build
 ```
 
 ## 🛠 **API Endpoints**
-### 1️⃣ **Create an Order**
+#### 1️⃣ **Create an Order**
 
 📌 Endpoint: POST
 ```bash
@@ -139,7 +139,7 @@ docker-compose up --build
 }
 ```
 
-### 2️⃣ **Get Order Status**
+#### 2️⃣ **Get Order Status**
 📌 Endpoint: GET 
 
 ```bash
@@ -153,7 +153,7 @@ http://localhost:3000/order/{order_id}
 }
 ```
 
-### 3️⃣ **Get Metrics**
+#### 3️⃣ **Get Metrics**
 📌 Endpoint: GET
 
 ```bash
