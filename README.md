@@ -116,10 +116,12 @@ docker-compose up --build
 
 ## 🛠 **API Endpoints**
 ### 1️⃣ **Create an Order**
-```python
-## 📌 **Endpoint: POST /order/
-##📌 Request Body (JSON):
+
+📌 Endpoint: 
+```bash
+ http://localhost:3000/order/
 ```
+📌 Request Body (JSON):
 ```json
 {
   "order_id": 101,
@@ -137,12 +139,12 @@ docker-compose up --build
 ```
 
 ### 2️⃣ **Get Order Status**
-📌 Endpoint: GET /order/{order_id}
+📌 Endpoint: GET ```/order/{order_id}```
+
 📌 Example Request:
-
-bash
-
+```sh
 curl -X GET "http://localhost:3000/order/101"
+```
 📌 Response:
 ```json
 {
@@ -151,7 +153,8 @@ curl -X GET "http://localhost:3000/order/101"
 ```
 
 ### 3️⃣ **Get Metrics**
-📌 Endpoint: GET /metrics/
+📌 Endpoint: GET ```/metrics/```
+
 📌 Response:
 
 ```json
