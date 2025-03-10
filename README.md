@@ -41,9 +41,9 @@ The system should:
 ---
 
 ## 📁 **Project Structure**  
-```
+```bash
 order-processing-api/
-│── main.py              # FastAPI application entry point
+│── app.py              # FastAPI application entry point
 │── database.py          # Database connection and initialization
 │── models.py            # SQLAlchemy ORM models
 │── schema.py            # Pydantic validation models
@@ -73,17 +73,43 @@ order-processing-api/
 │── docker-compose.yml   # Docker setup
 │── Dockerfile           # Container setup
 │── .gitignore           # Ignored files
-
-```
 ---
+```
 
 ## 🛠️ **Installation & Setup**  
 
-### **1️⃣ Prerequisites**  
-- **Python 3.9+**  
-- **PostgreSQL or SQLite**  
-- **Docker (Optional for deployment)**  
+### **1️⃣ Clone the Repository** 
+```bash
+https://github.com/anil-gaikwad/order-processing-backend.git
+cd order-processing-api
+```
 
-### **2️⃣ Install Dependencies**  
+### **2️⃣ Create a Virtual Environment** 
+ ```bash
+ python -m venv venv
+source venv/bin/activate  # On macOS/Linux
+venv\Scripts\activate     # On Windows
+
+ ```
+
+### **3️⃣ Install Dependencies**
+```bash
+pip install -r requirements.txt
+```
+
+## **4️⃣ Configure the Database**
+- **Edit .env file to set up SQLite / PostgreSQL / MySQL.**
+- **Initialize the database:**
+```bash
+python database.py
+```
+
+### **5️⃣ Run the Application**  
+```bash
+uvicorn main:app --host 0.0.0.0 --port 3000 --reload
+```
+
+### **6️⃣ Run with Docker (Optional)**  
 ```sh
 pip install -r requirements.txt
+
