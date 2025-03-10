@@ -111,5 +111,54 @@ uvicorn main:app --host 0.0.0.0 --port 3000 --reload
 
 ### **6️⃣ Run with Docker (Optional)**  
 ```sh
-pip install -r requirements.txt
+docker-compose up --build
+```
 
+## 🛠 **API Endpoints**
+### 1️⃣ **Create an Order**
+```python
+## 📌 **Endpoint: POST /order/
+##📌 Request Body (JSON):
+```
+```json
+{
+  "order_id": 101,
+  "user_id": 5001,
+  "item_ids": [12, 34, 56],
+  "total_amount": 250.75
+}
+```
+📌 Response:
+```json
+{
+  "message": "Order received",
+  "order_id": 101
+}
+```
+
+### 2️⃣ **Get Order Status**
+📌 Endpoint: GET /order/{order_id}
+📌 Example Request:
+
+bash
+
+curl -X GET "http://localhost:3000/order/101"
+📌 Response:
+```json
+{
+  "order_id": 101,
+  "status": "Processing"
+```
+
+### 3️⃣ **Get Metrics**
+📌 Endpoint: GET /metrics/
+📌 Response:
+
+```json
+{
+  "total_orders": 1000,
+  "orders_pending": 200,
+  "orders_processing": 500,
+  "orders_completed": 300,
+  "average_processing_time": 2.5
+```
