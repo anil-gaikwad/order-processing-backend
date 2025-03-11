@@ -41,7 +41,7 @@ The system should:
 ## 📁 **Project Structure**  
 ```bash
 order-processing-api/
-│── app.py              # FastAPI application entry point
+│── app.py               # FastAPI application entry point
 │── database.py          # Database connection and initialization
 │── models.py            # SQLAlchemy ORM models
 │── schema.py            # Pydantic validation models
@@ -52,8 +52,8 @@ order-processing-api/
 │
 │── services/            # Business logic (Service Layer)
 │   ├── __init__.py
-│   ├── order_service.py # Order logic
-│   ├── metrics_service.py # Metrics calculation
+│   ├── order_service.py # Functions for handling order logic
+│   ├── metrics_service.py # Functions for metrics calculation
 │
 │── workers/             # Background processing (Queue worker)
 │   ├── __init__.py
