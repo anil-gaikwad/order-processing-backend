@@ -1,5 +1,3 @@
-# 📦 Order Processing API  
-
 ## 📝 Assignment: Backend System for Order Processing  
 
 ### 🎯 **Objective**  
