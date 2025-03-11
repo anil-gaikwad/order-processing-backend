@@ -20,6 +20,10 @@ def custom_openapi():
 app = FastAPI()
 app.openapi = custom_openapi
 
+@app.get("/health")
+def health_check():
+    return {"status": "ok"}
+
 
 @app.on_event("startup")
 async def startup_event():

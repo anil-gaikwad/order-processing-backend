@@ -104,7 +104,7 @@ python database.py
 
 #### **5️⃣ Run the Application**  
 ```bash
-uvicorn main:app --host 0.0.0.0 --port 3000 --reload
+uvicorn app:app --host 0.0.0.0 --port 3000 --reload
 ```
 
 #### **6️⃣ Run with Docker (Optional)**  
@@ -117,7 +117,7 @@ docker-compose up --build
 
 📌 Endpoint: POST
 ```bash
- http://localhost:3000/order/
+ http://localhost:3000/api/order
 ```
 📌 Request Body (JSON):
 ```json
@@ -141,7 +141,7 @@ docker-compose up --build
 📌 Endpoint: GET 
 
 ```bash
-http://localhost:3000/order/{order_id}
+http://localhost:3000/api/order/{order_id}
 ```
 📌 Response:
 ```json
@@ -155,7 +155,7 @@ http://localhost:3000/order/{order_id}
 📌 Endpoint: GET
 
 ```bash
-http://localhost:3000/metrics/
+http://localhost:3000/api/metrics
 ```
 📌 Response:
 
