@@ -96,7 +96,7 @@ pip install -r requirements.txt
 ```
 
 #### **4️⃣ Configure the Database**
-- **Edit .env file to set up SQLite / PostgreSQL / MySQL.**
+- **Edit .env file to set up SQLite.**
 - **Initialize the database:**
 ```bash
 python database.py
